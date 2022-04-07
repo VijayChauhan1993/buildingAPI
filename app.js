@@ -1,18 +1,13 @@
 const express = require('express');
+const middleware = require('./middlewares');
+const routes = require('./routes');
 
 const app = express();
+//middlewares
+middleware(app);
 
-app.get('/', (req, res, next) => {
-    res.json({
-        message: "Welcome to the Homepage.",
-        status: 200
-    })
-});
+//routes
+routes(app);
 
-app.get('/user/:id', (req, res, next) => {
-    console.log(req.params);
-    console.log(req.query);
-    res.send("Welcome to the Userpage.")
-});
 
 module.exports = app;
