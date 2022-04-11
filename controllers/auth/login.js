@@ -1,8 +1,8 @@
-const logger = require('../../configuration/logger.js')
+// const logger = require('../../configuration/logger')
 
-const getLogin = function (req, res, next) {
+getLogin = function (req, res, next) {
     res.send('Welcome to the Login Page');
-    logger.info('hello');
+    // logger.info('hello');
 };
 
 const getSignUp = function (req, res, next) {

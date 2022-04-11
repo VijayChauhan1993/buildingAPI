@@ -1,7 +1,9 @@
 const authRouter = require('./auth.js')
+const movieRouter = require('./movie');
 
 const routes = function (app) {
     app.use('/auth', authRouter);
+    app.use(movieRouter);
 
     app.get('/', (req, res, next) => {
         res.json({
